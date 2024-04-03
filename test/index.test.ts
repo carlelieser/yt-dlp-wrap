@@ -154,10 +154,13 @@ describe('AbortController functions', function () {
 });
 
 describe('utility functions', function () {
+    this.timeout(50000)
     it('video Info should have title Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film', async function () {
         let videoInfo = await ytDlpWrap.getVideoInfo(
-            'https://www.youtube.com/watch?v=aqz-KE-bpKQ'
+            'https://www.youtube.com/watch?v=hIEZ1tXn1tc'
         );
+
+        console.log(videoInfo)
         assert.strictEqual(
             videoInfo.title,
             'Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film'
